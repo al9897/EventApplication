@@ -1,0 +1,178 @@
+/*Links*/
+a{
+	color: grey;
+	font-family: Courier New;
+}	
+a:hover {
+	color:white;
+	
+}
+.block-4:hover{
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;}
+
+.block-8:hover{
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*font*/
+h2{
+font-family: Work Sans,sans-serif;
+    font-weight: 400;
+}
+.container{width:100%;}
+.zoom:hover{
+	 transform: scale(1.5); 
+}
+.zoom {
+    transition: transform .2s; /* Animation */
+    width: 50;
+    height: 50;
+    margin: 0 auto;
+}
+/*Content*/
+.content{background-color:white;margin-top:0.5%;}
+.row{padding:1% 10% 0 10%;}
+
+ .block-8 {
+    display: block;
+    height: 320px;
+	overflow: hidden;
+	background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+.block-4 {
+    display: block;
+    height: 320px;
+	overflow: hidden;
+	background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+.block-content-bottom{
+	bottom: 20px;
+    left: 5%;
+    position: absolute;
+    width: 90%;
+    z-index: 100;
+	color:White;}
+.items:hover
+{transform: scale(1.5);
+ font-size:110%; 
+  color:white;
+}
+/*Header*/
+/*Heading of categories page: health, tech, environment, society*/
+/*position of Login link*/
+.login {
+	font-family: Arial;
+	display: Block;
+	text-align: left;
+	padding-left: 2%;
+	margin-top:1%;
+	float: right;
+	font-size:100%;
+
+}	
+/*section of login logo and name of the website*/	
+.heading {
+
+	width:100%;
+	margin-top:-0.2%;
+	height:30%;
+
+}
+
+.imageheader
+{
+	
+}
+
+/*Categories*/
+.categories {
+	list-style-type: none;
+	overflow: hidden;
+	background-color: rgb(70, 46, 49);
+
+	
+	
+}	
+.items {
+	font-family: Courier New;
+	display: Block;
+	text-align: left;
+	padding-left: 3%;
+	margin-top:1%;
+	float: left;
+	font-size:100%;
+	 transition: transform .3s; 
+
+	
+}
+/*footer*/
+.footer
+{
+	color:white;
+	border: solid;
+	width: 100%;
+	height:15%;
+	float: left;
+	clear: both;
+	background-color: rgb(70, 46, 49);
+	word-spacing:15%;
+}
+.leftcontent
+{
+	padding:3%;
+	padding-left:15%;
+	line-height:200%;
+	width:1%;
+	height: 75%;
+	text-align:center;
+	float:left;
+	display:block;
+	font-size:150%;
+
+	
+}
+.rightcontent
+{
+	width:80%;
+	height: 75%;
+	text-align:center;
+	float:right;
+	display:block;
+	font-size:150%;
+	padding-left:1%;
+	border:2%;
+	margin-top:3%;
+	font-family:
+}
+.endfooter
+{
+	width:100%;
+	float:right;
+	text-align:right;
+	font-size:50%;
+	color:white;
+}

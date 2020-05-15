@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62985A2D-1039-48DB-B6DF-A59FA01AA3F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProPApplication</RootNamespace>
+    <AssemblyName>ProPApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ProPApplication.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.5073.29922, Culture=neutral, PublicKeyToken=6bcd409ee6bc9292, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Phidget22.NET, Version=1.1.0.32, Culture=neutral, PublicKeyToken=aefa9ee0bcd237af, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Phidgets\Phidget22\Phidget22.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Store\LoanType.cs" />
+    <Compile Include="Store\Tent.cs" />
+    <Compile Include="User controls for app\AddParticipant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User controls for app\AddParticipant.Designer.cs">
+      <DependentUpon>AddParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User controls for app\adminPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User controls for app\adminPanel.Designer.cs">
+      <DependentUpon>adminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User controls for app\BorrowDevice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User controls for app\BorrowDevice.Designer.cs">
+      <DependentUpon>BorrowDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB Connection\DBConnection.cs" />
+    <Compile Include="User controls for app\Drink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User controls for app\Drink.Designer.cs">
+      <DependentUpon>Drink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\DrinkType.cs" />
+    <Compile Include="User controls for app\employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User controls for app\employee.Designer.cs">
+      <DependentUpon>employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event Monitor\Event.cs" />
+    <Compile Include="User controls for app\Food.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User controls for app\Food.Designer.cs">
+      <DependentUpon>Food.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\FoodType.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\IStorageAndShop.cs" />
+    <Compile Include="Store\Item.cs" />
+    <Compile Include="User controls for app\LogIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User controls for app\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User controls for app\LostRFID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User controls for app\LostRFID.Designer.cs">
+      <DependentUpon>LostRFID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event Monitor\Participant.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User controls for app\Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User controls for app\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User controls for app\Rent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User controls for app\Rent.Designer.cs">
+      <DependentUpon>Rent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\Shop.cs" />
+    <Compile Include="User controls for app\ShopPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User controls for app\ShopPanel.Designer.cs">
+      <DependentUpon>ShopPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event Monitor\Staff.cs" />
+    <Compile Include="Store\Storage.cs" />
+    <Compile Include="Event Monitor\Visitor.cs" />
+    <EmbeddedResource Include="User controls for app\AddParticipant.resx">
+      <DependentUpon>AddParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User controls for app\adminPanel.resx">
+      <DependentUpon>adminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User controls for app\BorrowDevice.resx">
+      <DependentUpon>BorrowDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User controls for app\Drink.resx">
+      <DependentUpon>Drink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User controls for app\employee.resx">
+      <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User controls for app\Food.resx">
+      <DependentUpon>Food.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User controls for app\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User controls for app\LostRFID.resx">
+      <DependentUpon>LostRFID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User controls for app\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User controls for app\Rent.resx">
+      <DependentUpon>Rent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User controls for app\ShopPanel.resx">
+      <DependentUpon>ShopPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_318-10026.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\devices.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project-management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NL_P4CH_all_hero_1275.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NL_PBKO_all_hero_2948.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NL_PCRO_all_hero_2948.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NL_PDES.HALF_all_hero_1275.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NL_PEXT_all_hero_2275.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NL_PWWA_all_hero_2948.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NL_SWWA_all_hero_2948.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PAME_ProductImage_Large_nl_Default_20130919.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDES_ProductImage_Large_nl_Default_20130919.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ECBOX_ProductImage_Large_nl_Default_20140727_124709.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ECHBIT_ProductImage_Large_nl_Default_20130919.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EPOTAT_ProductImage_Large_nl_Default_20140727_122622.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ESTRIP_ProductImage_Large_nl_Default_20140727_122738.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NL_EPPEC_all_hero_1998.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ECHBRD_ProductImage_Large_nl_Default_20130919.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24336853_digital-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7310070003096.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\can-pepsi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pepsi-max-ginger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FRISDRANK-COCA-COLA-REGULAR-BLIKJE-0-33L-%28c%29897061.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frisdrank-coca-cola-zero-cherry-blikje-0-33l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\absorg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corona.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jw-black_label-945x1058.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sierra_tequila-silver-1l-jumbo-slijterij.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\We-Tasted-Trader-Joes-Distinqt-Tequila-to-Find-Out-If-Its-Worth-It-720x720-main-image-article-crop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\old-brigand-black-label-10-year-old-superior-rum-barbados-10730509.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blanket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flashlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heater.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speakers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zippo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magsafe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\shop-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

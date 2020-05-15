@@ -1,0 +1,6 @@
+Add signup, login, profile
+Add button in the profile page to redirect the visitor to the map page which the visitors
+can choose and reserver their camping spot.
+
+In the profile page there should be a link(button) to buy the ticket and reservation
+After purchased the ticket the ticket should have their Account username on the ticket

@@ -1,0 +1,7 @@
+Order Number: 14
+*********************************************************
+Item number              Name          Quantity      Price
+6                        Charger          1           10 order number: 0
+*********************************************************
+                                      Total: 10
+Seller: quoc

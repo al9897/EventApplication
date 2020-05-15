@@ -1,0 +1,7 @@
+The visitors have to buy ticket in the website.
+Visitors who dont have ticket can buy ticket at the entrance(Update the user info
+to the database using the application)
+Show or hide the user accountNumber
+-Ask the client how many locations available for camping.
+add another attribute in evenaccount to keep track of loan material
+another attribute for check in and check out

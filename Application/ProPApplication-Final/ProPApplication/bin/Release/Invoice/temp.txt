@@ -1,0 +1,5 @@
+Item number      Name      Quantity      Price
+3                        pizza3          1           45
+6                        pizza6          2           30
+************************
+               Total: 75

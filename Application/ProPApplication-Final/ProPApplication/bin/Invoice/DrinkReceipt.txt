@@ -1,0 +1,7 @@
+Order Number: 13
+*********************************************************
+Item number              Name          Quantity      Price
+2                        softdrink2          1           4
+*********************************************************
+                                      Total: 4
+Seller: quoc
